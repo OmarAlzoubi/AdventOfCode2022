@@ -23,9 +23,6 @@ int main () {
     {
         getline(myFile, line);
 
-        cout << line << endl;
-        
-
         for (int i = 0; i < numberOfStacks; i++)
         {
             char crate = line.substr(i*charsToRead, charsToRead)[1];
@@ -53,8 +50,6 @@ int main () {
         
         from--;to--;
 
-        cout << amount << " " << from << " " << to << endl;
-        //cout << line << endl;
         for (int i = 0; i < amount; i++)
         {
             if (!stacks[from].empty())

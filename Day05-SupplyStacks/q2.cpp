@@ -22,13 +22,12 @@ int main () {
     while (linesToRead >= 1)
     {
         getline(myFile, line);
-        cout << line << endl;
-
 
         for (int i = 0; i < numberOfStacks; i++)
         {
             char crate = line.substr(i*charsToRead, charsToRead)[1];
 
+            //Handle white space.
             if ((crate >= 'A') && (crate <='Z'))
             {
                 stacks[i].push_front(crate);
@@ -46,7 +45,6 @@ int main () {
 
     while (getline(myFile, line))
     {
-        cout << line << endl;
         std::istringstream iss(line);
         string discard;
         int amount, from, to;
